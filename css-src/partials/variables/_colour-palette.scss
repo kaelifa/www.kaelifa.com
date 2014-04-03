@@ -1,0 +1,49 @@
+/**
+    @description    Colour palette
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-02 15:48
+        @example
+           @type    variables
+          @notes
+         @ignore
+ */
+
+/**
+    @section        Base colours
+*/
+$color-black:       #000;
+$color-white:       #fff;
+$color-pink:        #bd007f;
+$color-turquoise:   #00a8b5;
+$color-orange:      #e2af00;
+
+/**
+    @section        Set Brand Colours
+*/
+$color-brand:        $color-pink;
+
+/**
+    @section        Social icon colours
+*/
+$color-social-bg:   lighten($color-black, 15%); // output = #262626
+$color-twitter:     #02aced; // https://twitter.com/logo
+$color-facebook:    #3b5998; //
+$color-linkedin:    #4875b4; // http://developer.linkedin.com/documents/branding-guidelines
+
+/**
+    @section        Colour
+*/
+
+$color-selection:   orange;
+// $color-body-bg:     #0A0909;
+// $color-body-bg:     darken(#c3a0db, 2%);
+// $color-body-bg:     #101010;
+$color-body-bg:     #eee;
+$color-copy:        black;
+// $color-link:        #a0d9db;
+$color-link:        #00a8b5;
+$color-hover:       $color-brand;
+$color-shadow:      #ddd;
+$color-border:      #a0d9db;
+$color-button:      $color-brand;

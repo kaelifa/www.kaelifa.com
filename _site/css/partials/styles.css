@@ -1,0 +1,3356 @@
+@charset "UTF-8";
+/**
+ * @projectDescription    AgilityDiary
+ *               @file    styles.css
+ *             @author    Kristina Auckland <Kristina.Auckland@gmail.com>
+ *            @version    0.1
+ *               @date    2014-02-08 17:22
+ *              @notes    NB. This is the master Sass file which imports all the partials.
+ *                        No CSS should be written in this file.
+ */
+/*! Please be aware that styles.css is a generated file and has been built using SCSS */
+/**
+ * @section        Compass
+ *   @notes        http://compass-style.org/install/
+ *                 $ gem update --system
+ *                 $ gem install compass
+ */
+/**
+ * @section        Susy Grid
+ *   @notes        http://susy.oddbird.net/guides/
+ *                 $ gem install susy
+ */
+/**
+ * @section        Settings
+ */
+/**
+ * @description    Susy Settings - Set up your default grid values: total columns, column width, and gutter width.
+ *
+ *      @author    http://susy.oddbird.net/
+ *     @version    0.1
+ *        @date    2017-02-08 18:57
+ *
+ *     @example
+ *
+ *        @type    settings
+ *       @notes    The breakpoint variables use colour coding. The .globalHeader class has debgging which
+ *                 can be enabled to view the matching colours in the background of the .globalHeader in
+ *                 the front end.
+ *      @ignore
+ *
+ */
+/**
+ * @section        settings
+ *   @notes        default size 0px - 576px
+ */
+/**
+ * @section        736 - PURPLE
+ *   @notes        (min-width: 321px) and (max-width: 480px)
+ */
+/**
+ * @section        736 - RED
+ *   @notes        (min-width: 576px) and (max-width: 736px)
+ */
+/**
+ * @section        736 - PINK
+ *   @notes        (min-width: 576px)
+ */
+/**
+ * @section        816 - BLUE
+ *   @notes        (min-width: 736px) and (max-width: 816px)
+ */
+/**
+ * @section        816 - YELLOW
+ *   @notes        (max-width: 816px)
+ */
+/**
+ * @section        976 - GREEN
+ *   @notes        (min-width: 816px)
+ */
+/**
+ * @section        Variables
+ */
+/**
+ * @description    Colour palette
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-08 19:21
+ *
+ *
+ *     @example
+ *
+ *
+ *        @type    variables
+ *       @notes
+ *      @ignore
+ *
+ */
+/**
+* @section        Base colours
+*/
+/**
+* @section        Set Brand Colour
+*/
+/**
+* @section        Social icon colours
+*/
+/**
+* @section        Colour complementary
+*/
+/**
+* @section        Colour
+*/
+/**
+ * @section        Mixins
+ */
+/**
+ * @description    font-sizing mixin
+ *
+ *      @author    http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+ *     @version    0.1
+ *        @date    2013-05-14 09:57
+ *
+ *
+ *     @example    @include font-size(1.6);
+ *
+ *
+ *        @type    mixin
+ *       @notes    returns rem and fall-back px values
+ *      @ignore
+ */
+/**
+ * @section        font-size
+ */
+/**
+ * @description    font stack mixins
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-08 18:57
+ *
+ *
+ *     @example
+ *
+ *        @type    mixin
+ *       @notes
+ *      @ignore
+ */
+/**
+ *     @section   import fonts
+ */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500);
+/**
+ *     @section   default-font-stack
+ */
+/**
+ *     @section   headline-font-stack
+ */
+/**
+ *     @section   logo-font-stack
+ */
+/**
+ *     @section   contrast-font-stack
+ */
+/**
+ * @description    rgba-bg mixin
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2013-05-14 09:57
+ *
+ *
+ *     @example
+ *
+ *
+ *        @type    mixin
+ *       @notes    converts hex value to rgb along with alpha
+ *      @ignore
+ */
+/**
+ * @section        rgba-bg
+ */
+/**
+ * @description    mq-support mixin
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2013-08-08 16:55
+ *
+ *
+ *     @example    @include mq-support(45em)
+ *
+ *
+ *        @type    mixin
+ *       @notes    http://seesparkbox.com/foundry/structuring_and_serving_styles_for_older_browsers
+ *                 adjusted to work with Compass and Susy grids.
+ *      @ignore
+ */
+/**
+ * @section        mq-support
+ */
+/**
+ * @section        Placeholders
+ */
+/**
+ * @description    visuallyhidden placeholder
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-10 10:49
+ *
+ *
+ *     @example
+ *                 .element p {
+ *                      @extend %visuallyhidden;
+ *                  }
+ *
+ *        @type    mixin
+ *       @notes    Hide only visually, but have it available for screenreaders: h5bp.com/v
+ *      @ignore
+ */
+/**
+ * @section        visuallyhidden
+ */
+/* line 22, ../../css-src/partials/partials/placeholders/_visually-hidden.scss */
+.navPrimary span, .navAccount span {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/**
+ *       @notes    Extends the .visuallyhidden class to allow the element to be focusable
+ *                 when navigated to via the keyboard: h5bp.com/p
+ *                 <div class="visuallyhidden focusable"></div>
+ */
+/**
+ * @description    circleAvatar placeholder
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-21 10:31
+ *
+ *
+ *     @example
+ *                 .element p {
+ *                      @extend %circleAvatar;
+ *                  }
+ *
+ *        @type    mixin
+ *       @notes
+ *      @ignore
+ */
+/**
+ * @section        circleAvatar
+ */
+/* line 22, ../../css-src/partials/partials/placeholders/_circle-avatar.scss */
+.avatar {
+  background-color: white;
+  border: 3px solid rgba(255, 255, 255, 0);
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 1px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 1px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 1px;
+  display: inline-block;
+  height: 64px;
+  line-height: 0;
+  margin: 1em;
+  overflow: hidden;
+  text-align: center;
+  -webkit-transition-timing-function: linear;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  width: 64px;
+}
+/* line 37, ../../css-src/partials/partials/placeholders/_circle-avatar.scss */
+.avatar:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+/* line 42, ../../css-src/partials/partials/placeholders/_circle-avatar.scss */
+.lt-ie9 .avatar {
+  color: transparent;
+}
+/* line 46, ../../css-src/partials/partials/placeholders/_circle-avatar.scss */
+.avatar img {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  max-width: 100%;
+}
+/* line 50, ../../css-src/partials/partials/placeholders/_circle-avatar.scss */
+.avatar img:hover {
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+/* line 57, ../../css-src/partials/partials/placeholders/_circle-avatar.scss */
+.avatar span {
+  display: block;
+  margin-top: 1.5em;
+}
+
+/**
+ * @description    zeroList placeholder
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-27 13:54
+ *
+ *
+ *     @example
+ *                 ul, ol, li {
+ *                      @extend %zeroList;
+ *                  }
+ *
+ *        @type    mixin
+ *       @notes
+ *      @ignore
+ */
+/**
+ * @section        zeroList
+ */
+/* line 22, ../../css-src/partials/partials/placeholders/_zero-list.scss */
+nav ul,
+nav ol,
+nav li, .searchResults ul, .searchResults li, .peopleList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * @section        Global
+ */
+/* line 14, ../../../../../../../../Applications/Mixture.app/Contents/Resources/gems/susy-1.0.9/sass/susy/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+ * @description    font stack mixins
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-21 09:50
+ *
+ *
+ *     @example
+ *
+ *
+ *
+ *        @type    mixin
+ *       @notes    Remove text-shadow in selection highlight: h5bp.com/i
+ *                 These selection declarations have to be separate.
+ *                 Customize the background color to match your design.
+ *      @ignore
+ */
+/**
+ *     @section   moz-selection
+ */
+/* line 24, ../../css-src/partials/partials/global/_selection.scss */
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.1);
+  text-shadow: none;
+}
+
+/**
+ *     @section   selection
+ */
+/* line 32, ../../css-src/partials/partials/global/_selection.scss */
+::selection {
+  background: rgba(0, 0, 0, 0.1);
+  text-shadow: none;
+}
+
+/**
+ * @description    normalize reset stylesheet
+ *
+ *      @author    normalize.css v2.1.2 | MIT License | git.io/normalize
+ *     @version    2.1.2
+ *        @date    2013-05-14 09:57
+ *
+ *        @type    global reset
+ *       @notes
+ *      @ignore
+ */
+/**
+ *     @section   HTML5 display definitions
+ *       @notes   Corrects `block` display not defined in IE 8/9.
+ */
+/* line 26, ../../css-src/partials/partials/global/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+hgroup,
+main,
+section,
+summary {
+  display: block;
+}
+
+/**
+ *       @notes   Corrects `inline-block` display not defined in IE 8/9.
+ */
+/* line 35, ../../css-src/partials/partials/global/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ *       @notes   Prevents modern browsers from displaying `audio` without controls.
+ *                Remove excess height in iOS 5 devices.
+ *
+ */
+/* line 44, ../../css-src/partials/partials/global/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ *       @notes   Address styling not present in IE 8/9.
+ */
+/* line 52, ../../css-src/partials/partials/global/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/**
+ *       @notes   Addresses styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 63, ../../css-src/partials/partials/global/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ *       @notes   Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 71, ../../css-src/partials/partials/global/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ *       @notes   Addresses styling not present in Safari 5 and Chrome.
+ */
+/* line 78, ../../css-src/partials/partials/global/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ *       @notes   Addresses styling not present in IE 8/9.
+ */
+/* line 85, ../../css-src/partials/partials/global/_normalize.scss */
+mark {
+  background: rgba(0, 0, 0, 0.1);
+  color: #262626;
+}
+
+/**
+ *       @notes   Corrects font family set oddly in Safari 5 and Chrome.
+ */
+/* line 96, ../../css-src/partials/partials/global/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ *       @notes   Improves readability of pre-formatted text in all browsers.
+ */
+/* line 104, ../../css-src/partials/partials/global/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ *       @notes   Sets consistent quote types.
+ */
+/* line 111, ../../css-src/partials/partials/global/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ *       @notes   Addresses inconsistent and variable font size in all browsers.
+ */
+/* line 118, ../../css-src/partials/partials/global/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ *       @notes   Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 126, ../../css-src/partials/partials/global/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 133, ../../css-src/partials/partials/global/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 137, ../../css-src/partials/partials/global/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/**
+ *       @notes   Corrects overflow displayed oddly in IE 9.
+ */
+/* line 148, ../../css-src/partials/partials/global/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/**
+ *       @notes   Addresses margin not present in IE 8/9 and Safari 5.
+ */
+/* line 159, ../../css-src/partials/partials/global/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/**
+ *       @notes   1. Corrects font family not being inherited in all browsers.
+ *                2. Corrects font size not being inherited in all browsers.
+ *                3. Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+ */
+/* line 175, ../../css-src/partials/partials/global/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/**
+ *       @notes   Addresses Firefox 4+ setting `line-height` on `input` using `!important` in
+ *                the UA stylesheet.
+ */
+/* line 186, ../../css-src/partials/partials/global/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ *       @notes   Address inconsistent `text-transform` inheritance for `button` and `select`.
+ *                All other form control elements do not inherit `text-transform` values.
+ *                Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ *                Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 197, ../../css-src/partials/partials/global/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ *       @notes   1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *                   and `video` controls.
+ *                2. Corrects inability to style clickable `input` types in iOS.
+ *                3. Improves usability and consistency of cursor style between image-type
+ *                   `input` and others.
+ *
+ */
+/* line 212, ../../css-src/partials/partials/global/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/**
+ *       @notes   Re-set default cursor for disabled elements.
+ */
+/* line 221, ../../css-src/partials/partials/global/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ *       @notes   1. Address box sizing set to `content-box` in IE 8/9.
+ *                2. Removes excess padding in IE 8/9.
+ */
+/* line 230, ../../css-src/partials/partials/global/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/**
+ *       @notes   1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ *                2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *                   (include `-moz` to future-proof).
+ */
+/* line 240, ../../css-src/partials/partials/global/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/**
+ *       @notes   Removes inner padding and search cancel button in Safari 5 and Chrome
+ *                on OS X.
+ */
+/* line 252, ../../css-src/partials/partials/global/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ *       @notes   Removes inner padding and border in Firefox 4+.
+ */
+/* line 260, ../../css-src/partials/partials/global/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ *       @notes   1. Removes default vertical scrollbar in IE 8/9.
+ *                2. Allow only vertical resizing of textareas.
+ *                3. Improves readability and alignment in all browsers.
+ */
+/* line 270, ../../css-src/partials/partials/global/_normalize.scss */
+textarea {
+  overflow: auto;
+  resize: vertical;
+  vertical-align: top;
+}
+
+/**
+ * @section        Elements
+ */
+/**
+ * @description    Styling for the html element
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2013-12-04 15:51
+ *
+ *
+ *     @example
+ *                 <html></html>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        html
+ */
+/* line 21, ../../css-src/partials/partials/elements/_html.scss */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: sans-serif;
+  font-size: 62.5%;
+  overflow-y: scroll;
+}
+
+/**
+ * @description    Creates the default styling for the body element
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-08 18:58
+ *
+ *
+ *     @example
+ *                 <body>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        body
+ */
+/* line 21, ../../css-src/partials/partials/elements/_body.scss */
+body {
+  background: white;
+  color: #343434;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+/**
+ * @description    Creates the default styling for links
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-01-26 12:13
+ *
+ *
+ *     @example
+ *                 <a href=""></a>
+ *
+ *
+ *        @type    element
+ *       @notes    ensure pseudo classes are ordered:
+ *                      :link
+ *                      :visited
+ *                      :hover
+ *                      :focus
+ *                      :active
+ */
+/**
+ * @section        a
+ */
+/* line 26, ../../css-src/partials/partials/elements/_a.scss */
+a {
+  color: #73afaa;
+  text-decoration: none;
+}
+/* line 30, ../../css-src/partials/partials/elements/_a.scss */
+a:hover {
+  text-decoration: underline;
+}
+/* line 34, ../../css-src/partials/partials/elements/_a.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 39, ../../css-src/partials/partials/elements/_a.scss */
+a:active, a:hover {
+  outline: 0;
+}
+/* line 43, ../../css-src/partials/partials/elements/_a.scss */
+a[href^="tel:"] {
+  color: #262626;
+  cursor: default;
+  text-decoration: none;
+}
+/* line 49, ../../css-src/partials/partials/elements/_a.scss */
+a[href^="tel:"]:before {
+  content: "\260E";
+  display: inline-block;
+  margin-right: 0.5em;
+}
+/* line 55, ../../css-src/partials/partials/elements/_a.scss */
+a img {
+  border: none;
+}
+
+/**
+ * @description    Heading styles
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-08 19:30
+ *
+ *
+ *     @example
+ *                 <h1></h1>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        h1
+ */
+/**
+ * @section        h1,h2,h3,h4,h5,h6
+ */
+/* line 33, ../../css-src/partials/partials/elements/_hx.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: -0.05em;
+  font-weight: bold;
+}
+
+/**
+ * @section        h2
+ */
+/**
+ * @section        h3
+ */
+/**
+ * @section        h4
+ */
+/**
+ * @section        h5
+ */
+/**
+ * @section        h6
+ */
+/**
+ * @description    Styling for the nav element
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2013-12-03 17:13
+ *
+ *
+ *     @example
+ *                 <nav></nav>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        nav
+ */
+/* line 23, ../../css-src/partials/partials/elements/_nav.scss */
+nav a {
+  text-decoration: none;
+}
+/* line 27, ../../css-src/partials/partials/elements/_nav.scss */
+.lt-ie9 nav {
+  display: block;
+}
+/* line 33, ../../css-src/partials/partials/elements/_nav.scss */
+nav ul,
+nav ol,
+nav li {
+  display: inline-block;
+}
+
+/**
+ * @description    Styling for the strong element
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2013-12-03 16:44
+ *
+ *
+ *     @example
+ *                 <strong></strong>
+ *
+ *
+ *        @type    element
+ *       @notes    Also covers styling for <b>
+ */
+/**
+ * @section        strong
+ */
+/* line 22, ../../css-src/partials/partials/elements/_strong.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ *     @section    Elements
+ * @sub-section    Table
+ */
+/**
+ * @description    Styling for the table element
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2013-05-14 09:57
+ *
+ *
+ *     @example
+ *                 <table></table>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        table
+ */
+/* line 23, ../../css-src/partials/partials/elements/table/_table.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 1em 0;
+}
+
+/**
+ *     @section    Elements
+ * @sub-section    Form
+ */
+/**
+ * @description    Form styling
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-15 08:40
+ *
+ *
+ *     @example
+ *                 <form>
+</form>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        form
+ */
+/* line 22, ../../css-src/partials/partials/elements/form/_form.scss */
+form {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+/* line 26, ../../css-src/partials/partials/elements/form/_form.scss */
+form > :first-child {
+  margin-top: 0;
+}
+
+/**
+ * @description    fieldset styling
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-15 08:40
+ *
+ *
+ *     @example
+ *                 <fieldset>
+ *                 </fieldset>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        fieldset
+ */
+/* line 22, ../../css-src/partials/partials/elements/form/_fieldset.scss */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0 0 1em 0;
+}
+
+/**
+ * @description    legend styling
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-15 08:40
+ *
+ *
+ *     @example
+ *                 <legend>
+ *                 </legend>
+ *
+ *
+ *        @type    element
+ *       @notes    1. Corrects color not being inherited in IE 8/9.
+ *                 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ *                 3. Corrects text not wrapping in Firefox 3.
+ */
+/**
+ * @section        legend
+ */
+/* line 24, ../../css-src/partials/partials/elements/form/_legend.scss */
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+/**
+ * @description    label styling
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-15 08:40
+ *
+ *
+ *     @example
+ *                 <label for="quickEnquiry_email">Email address</label>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        label
+ */
+/* line 21, ../../css-src/partials/partials/elements/form/_label.scss */
+label {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  cursor: pointer;
+  margin: .5em 0;
+  padding: .5em;
+  text-align: right;
+}
+
+/**
+ * @description    textarea styling
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-15 08:40
+ *
+ *
+ *     @example
+ *                 <textarea></textarea>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        textarea
+ */
+/* line 21, ../../css-src/partials/partials/elements/form/_textarea.scss */
+textarea {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  border: 1px solid #d4d4d4;
+  box-shadow: inset 0 1px 3px #dddddd;
+  font-family: 'Noto Sans', sans-serif;
+  height: 5em;
+  margin: .5em .6em;
+  padding: .5em .6em;
+}
+
+/**
+ * @description    input styling
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-15 08:40
+ *
+ *
+ *     @example
+ *                 <input></input>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        input
+ */
+/* line 21, ../../css-src/partials/partials/elements/form/_input.scss */
+input {
+  border: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  box-shadow: inset 0 1px 3px #dddddd;
+  font-family: 'Noto Sans', sans-serif;
+  margin: .5em .6em;
+  padding: .5em .6em;
+}
+/* line 32, ../../css-src/partials/partials/elements/form/_input.scss */
+input[type="email"], input[type="password"], input[type="text"], input[type="url"] {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+/* line 37, ../../css-src/partials/partials/elements/form/_input.scss */
+input[type="radio"], input[type="checkbox"] {
+  margin: 1em 0;
+}
+
+/**
+ * @description    input styling
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-19 19:45
+ *
+ *
+ *     @example
+ *                 <select></select>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        select
+ */
+/* line 21, ../../css-src/partials/partials/elements/form/_select.scss */
+select {
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  font-family: 'Noto Sans', sans-serif;
+  border: 1px solid #d4d4d4;
+  box-shadow: inset 0 1px 3px #dddddd;
+  margin: 1em .6em;
+  padding: .5em .6em;
+}
+
+/**
+ * @description    buttons module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.2
+ *        @date    2014-02-15 08:40
+ *
+ *
+ *     @example
+ *                 <button></button>
+ *
+ *
+ *        @type    element
+ *       @notes
+ */
+/**
+ * @section        button
+ */
+/**
+ * @section        Layout
+ */
+/**
+ * @description    Styling for the container class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-10-02 16:04
+ *
+ *
+ *     @example
+ *                 <div class="container">
+ *
+ *                 </div>
+ *
+ *
+ *        @type    layout
+ *       @notes
+ */
+/**
+ * @section        container
+ */
+/* line 23, ../../css-src/partials/partials/default-layout/_container.scss */
+.container {
+  *zoom: 1;
+  max-width: 71em;
+  _width: 71em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+/* line 38, ../../../../../../../../Applications/Mixture.app/Contents/Resources/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+ * @description    Styling for the main layout wrapper
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-10-02 16:04
+ *
+ *
+ *     @example
+ *                 <div class="layoutWrapper">
+ *
+ *                 </div>
+ *
+ *
+ *        @type    layout
+ *       @notes
+ */
+/**
+ * @section        layoutWrapper
+ */
+/**
+ * @description    Styling for the layout header
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-08 18:25
+ *
+ *
+ *     @example
+ *                 <header class="layoutHeader" role="banner">
+ *
+ *                 </header>
+ *
+ *        @type    layout
+ *       @notes
+ */
+/**
+ * @section        layoutHeader
+ */
+/* line 22, ../../css-src/partials/partials/default-layout/_layout-header.scss */
+.layoutHeader {
+  background: #323a45;
+  overflow: auto;
+}
+
+/**
+ * @description    Stying for the main layout footer
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-10 21:59
+ *
+ *
+ *     @example
+ *                 <footer class="layoutFooter" role="contentinfo">
+ *
+ *                 </footer>
+ *
+ *        @type    layout
+ *       @notes
+ */
+/**
+ * @section        layoutFooter
+ */
+/* line 22, ../../css-src/partials/partials/default-layout/_layout-footer.scss */
+.layoutFooter {
+  background: #323a45;
+  padding: 0 1em;
+}
+
+/**
+ * @description    Styling for the wrapper
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-10-21 12:23
+ *
+ *
+ *     @example
+ *                 <div class="wrapper">
+ *
+ *                 </div>
+ *
+ *
+ *        @type    layout
+ *       @notes
+ */
+/**
+ * @section        wrapper
+ */
+/* line 23, ../../css-src/partials/partials/default-layout/_wrapper.scss */
+.wrapper {
+  background: white;
+}
+
+/**
+ * @description    Styling for the content wrapper
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-10-02 16:04
+ *
+ *
+ *     @example
+ *                 <div class="contentWrapper">
+ *
+ *                 </div>
+ *
+ *
+ *        @type    layout
+ *       @notes
+ */
+/**
+ * @section        contentWrapper
+ */
+/* line 23, ../../css-src/partials/partials/default-layout/_content-wrapper.scss */
+.contentWrapper {
+  padding: 0 1em;
+}
+
+/**
+ * @description    Styling for the main content
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-10-02 16:04
+ *
+ *
+ *     @example
+ *                 <div class="contentMain">
+ *
+ *                 </div>
+ *
+ *
+ *        @type    layout
+ *       @notes
+ */
+/**
+ * @section        contentMain
+ */
+/* line 23, ../../css-src/partials/partials/default-layout/_content-main.scss */
+.contentMain {
+  width: 74.57627%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/**
+ * @description    Styling for the sub content
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-10-02 16:04
+ *
+ *
+ *     @example
+ *                 <div class="contentSub">
+ *
+ *                 </div>
+ *
+ *
+ *        @type    layout
+ *       @notes
+ */
+/**
+ * @section        contentSub
+ */
+/* line 23, ../../css-src/partials/partials/default-layout/_content-sub.scss */
+.contentSub {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/**
+ * @section        Navigation
+ */
+/**
+ * @description    Styling for the primary navigation
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-10 10:58
+ *
+ *
+ *     @example
+ *                 <nav class="navPrimary">
+ *
+ *                 </nav>
+ *
+ *        @type    navigation
+ *       @notes
+ *
+ */
+/**
+ * @section        navPrimary
+ */
+/* line 22, ../../css-src/partials/partials/navigation/_nav-primary.scss */
+.navPrimary {
+  float: left;
+  display: inline-block;
+  text-align: center;
+}
+/* line 27, ../../css-src/partials/partials/navigation/_nav-primary.scss */
+.navPrimary a {
+  display: inline-block;
+  margin: 0;
+  padding: .75em 1em;
+}
+/* line 33, ../../css-src/partials/partials/navigation/_nav-primary.scss */
+.navPrimary a.active, .navPrimary a:hover {
+  background: #27303B;
+  color: #62c0b8;
+  text-decoration: none;
+}
+
+/**
+ * @description    Styling for the account navigation
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-05 12:24
+ *
+ *
+ *     @example
+ *                 <nav class="navAccount">
+ *
+ *                 </nav>
+ *
+ *        @type    navigation
+ *       @notes
+ *
+ */
+/**
+ * @section        navAccount
+ *   @notes        extends navPrimary
+ */
+/* line 23, ../../css-src/partials/partials/navigation/_nav-account.scss */
+.navAccount {
+  float: right;
+}
+
+/**
+ * @description    Styling for the paging navigation
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-01 16:26
+ *
+ *
+ *     @example
+ *                 <nav class="navPaging">
+ *
+ *                 </nav>
+ *
+ *        @type    navigation
+ *       @notes
+ *
+ */
+/**
+ * @section        navPaging
+ */
+/* line 22, ../../css-src/partials/partials/navigation/_nav-paging.scss */
+.navPaging {
+  clear: both;
+  padding: 1em;
+  text-align: center;
+}
+/* line 27, ../../css-src/partials/partials/navigation/_nav-paging.scss */
+.navPaging a {
+  padding: .25em .5em;
+}
+/* line 31, ../../css-src/partials/partials/navigation/_nav-paging.scss */
+.navPaging a.active, .navPaging a:hover {
+  text-decoration: none;
+}
+/* line 37, ../../css-src/partials/partials/navigation/_nav-paging.scss */
+.navPaging .selected {
+  border: 1px solid #d4d4d4;
+  font-weight: bold;
+}
+
+/**
+ * @description    styling for the navTabs class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.2
+ *        @date    2014-02-12 13:50
+ *
+ *
+ *     @example
+ *                 <nav class="navTabs"></nav>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        navTabs
+ */
+/* line 19, ../../css-src/partials/partials/navigation/_nav-tabs.scss */
+.navTabs {
+  border-bottom: 1px solid #d4d4d4;
+  clear: both;
+  margin: 1em 0;
+  padding: 0 1em;
+}
+/* line 25, ../../css-src/partials/partials/navigation/_nav-tabs.scss */
+.navTabs a {
+  background: #73afaa;
+  border-bottom: 1px solid #73afaa;
+  color: white;
+  display: inline-block;
+  margin-bottom: -2px;
+  padding: .25em .5em;
+}
+/* line 33, ../../css-src/partials/partials/navigation/_nav-tabs.scss */
+.navTabs a:hover {
+  background: #579893;
+  text-decoration: none;
+}
+/* line 38, ../../css-src/partials/partials/navigation/_nav-tabs.scss */
+.navTabs a.active {
+  background: white;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  color: #73afaa;
+}
+/* line 46, ../../css-src/partials/partials/navigation/_nav-tabs.scss */
+.navTabs .count {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/**
+ * @section        Modules
+ */
+/**
+ * @description    styling for the brandLogo class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-10 10:48
+ *
+ *
+ *     @example
+ *                 <a class="brandLogo" href="/">AgilityDiary</a>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        brandLogo
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-brand-logo.scss */
+.brandLogo {
+  display: inline-block;
+  font-size: 20px;
+  font-size: 2rem;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: -0.05em;
+  font-weight: bold;
+}
+/* line 26, ../../css-src/partials/partials/modules/_mod-brand-logo.scss */
+.navPrimary .brandLogo:hover {
+  background: transparent;
+}
+/* line 31, ../../css-src/partials/partials/modules/_mod-brand-logo.scss */
+.navPrimary .brandLogo {
+  border-left: 0;
+  padding: .25em 2em .33em 1em;
+}
+/* line 36, ../../css-src/partials/partials/modules/_mod-brand-logo.scss */
+.signedOut .layoutHeader .brandLogo {
+  font-size: 40px;
+  font-size: 4rem;
+  padding: .25em 2em .33em 1em;
+}
+/* line 41, ../../css-src/partials/partials/modules/_mod-brand-logo.scss */
+.signedOut .hero .brandLogo {
+  font-size: 40px;
+  font-size: 4rem;
+}
+/* line 45, ../../css-src/partials/partials/modules/_mod-brand-logo.scss */
+.signedOut .panel .brandLogo {
+  font-size: 16px;
+  font-size: 1.6rem;
+  padding: 0 .25em;
+}
+
+/**
+ * @description    styling for the introduction class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-11 15:51
+ *
+ *
+ *     @example
+ *                 <section class="introduction"></section>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        introduction
+ */
+/* line 21, ../../css-src/partials/partials/modules/_mod-introduction.scss */
+.introduction img {
+  float: left;
+  margin-bottom: 1em;
+  margin-right: 1em;
+}
+
+/**
+ * @description    styling for the map module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-14 15:20
+ *
+ *
+ *     @example
+ *                 <div class="map"></div>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        map
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-map.scss */
+.map {
+  height: 400px;
+}
+
+/**
+ * @description    styling for the mapSearch class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-11 20:36
+ *
+ *
+ *     @example
+ *                 <a class="mapSearch" href="/">AgilityDiary</a>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        mapSearch
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-map-search.scss */
+.mapSearch {
+  background: rgba(0, 0, 0, 0.5);
+  left: 80px;
+  padding: 20px;
+  position: absolute;
+  top: 180px;
+  width: 50%;
+  z-index: 1000;
+}
+/* line 28, ../../css-src/partials/partials/modules/_mod-map-search.scss */
+.mapSearch input {
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 1em;
+  width: 100%;
+}
+
+/**
+ * @description    styling for the pin module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.2
+ *        @date    2014-03-14 12:11
+ *
+ *
+ *     @example
+ *                 <div class="pin"></div>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        pinWrapper
+ */
+/**
+ * @section        pin
+ */
+/* line 26, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pin {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border-radius: 100%;
+  display: block;
+  height: .5em;
+  margin: 0 auto .25em auto;
+  padding: .5em .6em;
+  width: 0;
+}
+
+/**
+ * @section        extend .pin
+ * @example        <div class="pin pinShowType"></div>
+ */
+/* line 40, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pinShowType {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/**
+ * @section        extend .pin
+ * @example        <div class="pin pinShowType pinIndependent"></div>
+ */
+/* line 48, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pinIndependent {
+  background: green;
+}
+
+/**
+ * @section        extend .pin
+ * @example        <div class="pin pinShowType pinBAA"></div>
+ */
+/* line 56, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pinBAA {
+  background: yellow;
+}
+
+/**
+ * @section        extend .pin
+ * @example        <div class="pin pinShowType pinUKA"></div>
+ */
+/* line 64, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pinUKA {
+  background: blue;
+}
+
+/**
+ * @section        extend .pin
+ * @example        <div class="pin pinShowType pinFAB"></div>
+ */
+/* line 72, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pinFAB {
+  background: pink;
+}
+
+/**
+ * @section        extend .pin
+ * @example        <div class="pin pinShowType pinInvitation"></div>
+ */
+/* line 80, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pinInvitation {
+  background: orange;
+}
+
+/**
+ * @section        extend .pin
+ * @example        <div class="pin pinShowType pinIrishKennelClub"></div>
+ */
+/* line 88, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pinIrishKennelClub {
+  background: purple;
+}
+
+/**
+ * @section        extend .pin
+ * @example        <div class="pin pinShowType pinKC"></div>
+ */
+/* line 96, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pinKC {
+  background: silver;
+}
+
+/**
+ * @section        extend .pin
+ * @example        <div class="pin pinShowType pinOther"></div>
+ */
+/* line 104, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pinOther {
+  background: cyan;
+}
+
+/**
+ * @section        extend .pin
+ * @example        <div class="pin pinShowType pinSeries"></div>
+ */
+/* line 112, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pinSeries {
+  background: violet;
+}
+
+/**
+ * @section        extend .pin
+ * @example        <div class="pin pinShowType pinTraining"></div>
+ */
+/* line 120, ../../css-src/partials/partials/modules/_mod-pin.scss */
+.pinTraining {
+  background: magenta;
+}
+
+/**
+ * @description    styling for the tags module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.2
+ *        @date    2014-02-12 13:01
+ *
+ *
+ *     @example
+ *                 <a class="tag" href="/">Tag text</a>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        tag
+ * @example        <a class="tag" href="/">Tag text</a>
+ */
+/* line 20, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tag {
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  color: white;
+  padding: .25em .5em;
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagShowType" href="/">Tag text</a>
+ */
+/* line 31, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tagShowType {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagShowType tagIndependent" href="/">Independent</a>
+ */
+/* line 39, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tagIndependent {
+  background: green;
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagShowType tagBAA" href="/">BAA</a>
+ */
+/* line 47, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tagBAA {
+  background: yellow;
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagShowType tagUKA" href="/">UKA</a>
+ */
+/* line 55, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tagUKA {
+  background: blue;
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagShowType tagFAB" href="/">FAB</a>
+ */
+/* line 63, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tagFAB {
+  background: pink;
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagShowType tagInvitation" href="/">Invitation</a>
+ */
+/* line 71, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tagInvitation {
+  background: orange;
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagShowType tagIrishKennelClub" href="/">Irish Kennel Club</a>
+ */
+/* line 79, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tagIrishKennelClub {
+  background: purple;
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagShowType tagKC" href="/">KC</a>
+ */
+/* line 87, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tagKC {
+  background: silver;
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagShowType tagOther" href="/">Other</a>
+ */
+/* line 95, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tagOther {
+  background: cyan;
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagShowType tagSeries" href="/">Series</a>
+ */
+/* line 103, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tagSeries {
+  background: violet;
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagShowType tagTraining" href="/">Training</a>
+ */
+/* line 111, ../../css-src/partials/partials/modules/_mod-tags.scss */
+.tagTraining {
+  background: magenta;
+}
+
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagTrainer" href="/">Trainer</a>
+ */
+/**
+ * @section        extend .tag
+ * @example        <a class="tag tagJudge" href="/">Judge</a>
+ */
+/**
+ * @description    styling for the categories module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-12 13:19
+ *
+ *
+ *     @example
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        category
+ */
+/* line 21, ../../css-src/partials/partials/modules/_mod-categories.scss */
+.category:hover {
+  text-decoration: none;
+}
+
+/**
+ * @description    styling for the showHide class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-12 13:28
+ *
+ *
+ *     @example
+ *                 <span class="show" ng-show="isCategorySelected(category);">✓</span>
+ *                 <span class="hide" ng-hide="isCategorySelected(category);">✗</span>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        show
+ */
+/* line 20, ../../css-src/partials/partials/modules/_mod-show-hide.scss */
+.show {
+  color: green;
+}
+
+/**
+ * @section        hide
+ */
+/* line 27, ../../css-src/partials/partials/modules/_mod-show-hide.scss */
+.hide {
+  color: red;
+}
+
+/**
+ * @description    styling for the eventList class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-12 16:02
+ *
+ *
+ *     @example
+ *                 <a class="eventList" href="/">AgilityDiary</a>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        eventList
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-event-list.scss */
+.eventList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 24, ../../css-src/partials/partials/modules/_mod-event-list.scss */
+.eventList .event {
+  margin-bottom: 2em;
+}
+
+/**
+ * @section        events
+ */
+/* line 32, ../../css-src/partials/partials/modules/_mod-event-list.scss */
+.events {
+  position: relative;
+}
+
+/**
+ * @section        eventListWrapper
+ */
+/**
+ * @section        event
+ */
+/* line 46, ../../css-src/partials/partials/modules/_mod-event-list.scss */
+.event {
+  clear: both;
+  overflow: auto;
+  position: relative;
+}
+
+/**
+ * @section        eventDate
+ */
+/* line 55, ../../css-src/partials/partials/modules/_mod-event-list.scss */
+.eventDate {
+  width: 18.36735%;
+  float: left;
+  margin-right: 2.04082%;
+  display: inline;
+}
+
+/**
+ * @section        eventShortDetail
+ */
+/* line 63, ../../css-src/partials/partials/modules/_mod-event-list.scss */
+.eventShortDetail {
+  width: 79.59184%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+/* line 66, ../../css-src/partials/partials/modules/_mod-event-list.scss */
+.eventShortDetail :first-child {
+  margin-top: 0;
+}
+
+/**
+ * @description    styling for the monthList class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-12 16:06
+ *
+ *
+ *     @example
+ *                 <a class="monthList" href="/">AgilityDiary</a>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        monthList
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-month-list.scss */
+.monthList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * @section        monthWrapper
+ */
+/* line 28, ../../css-src/partials/partials/modules/_mod-month-list.scss */
+.monthWrapper {
+  border-bottom: 2px solid #d4d4d4;
+  margin-bottom: 1em;
+}
+
+/**
+ * @description    styling for the friends module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-21 10:29
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        friendsList
+ */
+/**
+ * @description    styling for the dogs module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-21 09:00
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        dogsList
+ */
+/**
+ * @description    styling for the profile module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-21 18:46
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        profile
+ */
+/* line 18, ../../css-src/partials/partials/modules/_mod-profile.scss */
+.profile {
+  position: relative;
+}
+
+/**
+ * @section        profileWrapper
+ */
+/**
+ * @section        profileCover
+ */
+/* line 32, ../../css-src/partials/partials/modules/_mod-profile.scss */
+.profileCover {
+  background: transparent center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 400px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/**
+ * @description    styling for the hero module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-24 10:59
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        hero
+ */
+/* line 18, ../../css-src/partials/partials/modules/_mod-hero.scss */
+.hero {
+  height: auto;
+  padding-top: 170px;
+  position: relative;
+  text-align: center;
+}
+/* line 24, ../../css-src/partials/partials/modules/_mod-hero.scss */
+.hero img {
+  vertical-align: middle;
+}
+/* line 28, ../../css-src/partials/partials/modules/_mod-hero.scss */
+.signedOut .hero {
+  background: transparent url("/app/images/weaving.jpg") center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 30px;
+}
+
+/**
+ * @description    styling for the bio module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-02 09:27
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        bio
+ */
+/* line 18, ../../css-src/partials/partials/modules/_mod-bio.scss */
+.bio {
+  color: white;
+  display: inline-block;
+  background-color: black;
+  background-color: black, 0.25;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 1em;
+}
+
+/**
+ * @description    styling for the avatar module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-21 18:58
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        avatarContainer
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-avatar.scss */
+.avatarContainer {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+/**
+ * @section        primaryAvatarContainer
+ */
+/* line 27, ../../css-src/partials/partials/modules/_mod-avatar.scss */
+.primaryAvatarContainer {
+  float: left;
+  width: 25%;
+}
+
+/**
+ * @section        secondaryAvatarContainer
+ */
+/* line 35, ../../css-src/partials/partials/modules/_mod-avatar.scss */
+.secondaryAvatarContainer {
+  float: left;
+  margin-top: 30px;
+  width: 75%;
+}
+
+/**
+ * @section        avatar
+ */
+/* line 44, ../../css-src/partials/partials/modules/_mod-avatar.scss */
+.avatar {
+  margin: .5em;
+}
+
+/**
+ * @section        primaryAvatar
+ */
+/* line 52, ../../css-src/partials/partials/modules/_mod-avatar.scss */
+.primaryAvatar {
+  height: 120px;
+  width: 120px;
+}
+
+/**
+ * @section        secondaryAvatar
+ */
+/* line 60, ../../css-src/partials/partials/modules/_mod-avatar.scss */
+.secondaryAvatar {
+  margin: .5em;
+}
+
+/**
+ * @section        friendAvatar
+ */
+/* line 67, ../../css-src/partials/partials/modules/_mod-avatar.scss */
+.friendAvatar {
+  height: 32px;
+  margin: .5em;
+  width: 32px;
+}
+
+/**
+ * @section        selectedAvatar
+ */
+/* line 77, ../../css-src/partials/partials/modules/_mod-avatar.scss */
+.selectedAvatar {
+  background-color: black;
+}
+
+/**
+ * @description    styling for the action module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.3
+ *        @date    2014-02-22 15:00
+ *
+ *
+ *     @example
+ *                 <div class="action"></div>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        action
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-action.scss */
+.action {
+  background-color: #73afaa;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+  text-align: center;
+  padding: .5em 1em;
+}
+/* line 30, ../../css-src/partials/partials/modules/_mod-action.scss */
+.action:hover {
+  background-color: #a4cbc8;
+  text-decoration: none;
+}
+
+/**
+ * @section        extend .action
+ */
+/* line 39, ../../css-src/partials/partials/modules/_mod-action.scss */
+.warning {
+  background-color: #b02035;
+}
+/* line 42, ../../css-src/partials/partials/modules/_mod-action.scss */
+.warning:hover {
+  background-color: #dc4057;
+}
+
+/**
+ * @section        extend .action
+ */
+/* line 51, ../../css-src/partials/partials/modules/_mod-action.scss */
+.cta {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+/**
+ * @section        extend .action
+ */
+/* line 58, ../../css-src/partials/partials/modules/_mod-action.scss */
+.social {
+  margin-right: 1em;
+}
+
+/**
+ * @section        extend .action--small
+ */
+/* line 65, ../../css-src/partials/partials/modules/_mod-action.scss */
+.action--small {
+  height: 2em;
+  line-height: 2;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+/**
+ * @section        extend .action--large
+ */
+/* line 75, ../../css-src/partials/partials/modules/_mod-action.scss */
+.action--large {
+  height: 4em;
+  line-height: 4;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+/**
+ * @section        extend .action--huge
+ */
+/* line 85, ../../css-src/partials/partials/modules/_mod-action.scss */
+.action--huge {
+  height: 5em;
+  line-height: 4;
+  padding-left: 0;
+  padding-right: 0;
+  width: 100%;
+}
+
+/**
+ * @section        extend .action--disabled
+ */
+/* line 96, ../../css-src/partials/partials/modules/_mod-action.scss */
+.action--disabled {
+  background: #ccc;
+  color: #aaa;
+  cursor: default;
+}
+/* line 101, ../../css-src/partials/partials/modules/_mod-action.scss */
+.action--disabled:hover {
+  background: #ccc;
+}
+
+/**
+ * @description    styling for the form module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.3
+ *        @date    2014-02-19 19:25
+ *
+ *
+ *     @example
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        formActions
+ */
+/* line 18, ../../css-src/partials/partials/modules/_mod-form.scss */
+.formActions {
+  clear: both;
+  padding: 3em 0 2em 0;
+  text-align: center;
+}
+
+/**
+ * @section        formField
+ */
+/* line 27, ../../css-src/partials/partials/modules/_mod-form.scss */
+.formField {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/**
+ * @section        formUpload
+ */
+/* line 35, ../../css-src/partials/partials/modules/_mod-form.scss */
+.formUpload .uploadImage {
+  margin: .5em .6em;
+}
+
+/**
+ * @section        formContent
+ */
+/* line 43, ../../css-src/partials/partials/modules/_mod-form.scss */
+.formContent {
+  padding-left: 25.42373%;
+}
+/* line 46, ../../css-src/partials/partials/modules/_mod-form.scss */
+.formContent :first-child {
+  margin-top: 0;
+}
+
+/**
+ * @section        formCheckbox
+ */
+/* line 54, ../../css-src/partials/partials/modules/_mod-form.scss */
+.formCheckbox {
+  padding-left: 25.42373%;
+}
+/* line 57, ../../css-src/partials/partials/modules/_mod-form.scss */
+.formCheckbox label {
+  float: none;
+  text-align: left;
+  width: auto;
+}
+
+/**
+ * @description    styling for the date module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-25 10:54
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        date
+ */
+/* line 18, ../../css-src/partials/partials/modules/_mod-date.scss */
+.date {
+  text-align: center;
+}
+/* line 21, ../../css-src/partials/partials/modules/_mod-date.scss */
+.event .date {
+  float: left;
+  margin: 0 auto;
+}
+
+/**
+ * @section        dateStart
+ */
+/**
+ * @section        dateDetail
+ */
+/* line 38, ../../css-src/partials/partials/modules/_mod-date.scss */
+.dateDetail {
+  padding: .5em .6em;
+}
+
+/**
+ * @section        dateMonth
+ */
+/* line 45, ../../css-src/partials/partials/modules/_mod-date.scss */
+.dateMonth {
+  background: #be040f;
+  color: white;
+}
+
+/**
+ * @section        dateDay
+ */
+/* line 53, ../../css-src/partials/partials/modules/_mod-date.scss */
+.dateDay {
+  background: #ecebe8;
+  font-size: 22px;
+  font-size: 2.2rem;
+}
+
+/**
+ * @section        showDate
+ */
+/**
+ * @description    styling for the closingDate module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-23 10:45
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        closingDate
+ */
+/* line 18, ../../css-src/partials/partials/modules/_mod-closing-date.scss */
+.closingDate {
+  color: green;
+}
+
+/**
+ * @section        closingDate--closed
+ */
+/* line 25, ../../css-src/partials/partials/modules/_mod-closing-date.scss */
+.closingDate--closed {
+  color: red;
+  font-weight: bold;
+}
+
+/**
+ * @section        closingDate--soon
+ */
+/* line 33, ../../css-src/partials/partials/modules/_mod-closing-date.scss */
+.closingDate--soon {
+  color: orange;
+  font-weight: bold;
+}
+
+/**
+ * @description    styling for the quickSearch module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.2
+ *        @date    2014-02-26 10:57
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        quickSearch
+ */
+/* line 18, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.quickSearch {
+  display: inline-block;
+  padding-top: .25em;
+  text-align: right;
+  width: 10em;
+}
+/* line 24, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.quickSearch input {
+  margin: 0;
+  text-align: left;
+  width: 100%;
+}
+/* line 30, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.quickSearch .action {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  padding: .5em .6em;
+}
+
+/**
+ * @section        searching
+ */
+/* line 39, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.searching {
+  border: solid 1px red;
+}
+
+/**
+ * @section        searchResults
+ */
+/* line 46, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.searchResults {
+  background: white;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 25%;
+  text-align: left;
+  width: auto;
+  z-index: 9999;
+}
+/* line 59, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.searchResults li {
+  clear: both;
+  overflow: hidden;
+  padding: .25em .5em;
+  position: relative;
+}
+/* line 65, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.searchResults li:first-child {
+  padding-top: .5em;
+}
+/* line 69, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.searchResults li:last-child {
+  padding-bottom: .5em;
+}
+/* line 73, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.searchResults li:hover {
+  background: #73afaa;
+  color: white;
+  cursor: pointer;
+  overflow: hidden;
+}
+/* line 81, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.searchResults i {
+  margin-right: .5em;
+}
+/* line 85, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.searchResults img {
+  float: left;
+}
+
+/**
+ * @section        meta
+ */
+/* line 93, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.meta {
+  float: left;
+  margin-left: 1em;
+}
+
+/**
+ * @section        metaDetail
+ */
+/* line 102, ../../css-src/partials/partials/modules/_mod-quick-search.scss */
+.metaDetail {
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+
+/**
+ * @description    styling for the panel module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-02-26 12:41
+ *
+ *
+ *     @example
+ *                 <section class="panel"></section>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        panel
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-panel.scss */
+.panel {
+  background: #1575a8;
+}
+/* line 22, ../../css-src/partials/partials/modules/_mod-panel.scss */
+.panel:nth-child(even) {
+  background: white;
+}
+/* line 30, ../../css-src/partials/partials/modules/_mod-panel.scss */
+.panel .container {
+  padding: 1em 2em 2em 2em;
+}
+
+/**
+ * @section        panel
+ *   @notes        http://creative-punch.net/2014/01/using-sass-generate-color-box-shadow-loop/
+ */
+/**
+ * @section        extend panel
+ */
+/* line 56, ../../css-src/partials/partials/modules/_mod-panel.scss */
+.postSomething form {
+  float: none;
+}
+
+/**
+ * @section        extend panel
+ */
+/**
+ * @section        extend panel
+ */
+/* line 71, ../../css-src/partials/partials/modules/_mod-panel.scss */
+.enteredShow {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  padding: 0 1em;
+}
+/* line 75, ../../css-src/partials/partials/modules/_mod-panel.scss */
+.enteredShow:first-child {
+  border-right: 1px solid #d4d4d4;
+}
+/* line 79, ../../css-src/partials/partials/modules/_mod-panel.scss */
+.enteredShow:last-child {
+  border-left: 1px solid #d4d4d4;
+}
+/* line 83, ../../css-src/partials/partials/modules/_mod-panel.scss */
+.enteredShow:nth-child(3n) {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+/* line 87, ../../css-src/partials/partials/modules/_mod-panel.scss */
+.enteredShow .showDetail {
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding-left: 2em;
+  position: relative;
+}
+/* line 92, ../../css-src/partials/partials/modules/_mod-panel.scss */
+.enteredShow .showDetail .fa {
+  left: 0;
+  padding-top: .5em;
+  position: absolute;
+}
+
+/**
+ * @description    styling for the filter module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.3
+ *        @date    2014-03-01 18:38
+ *
+ *
+ *     @example
+ *                 <div class="filter"></div>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        filter
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-filter.scss */
+.filter {
+  padding: 1em;
+}
+/* line 22, ../../css-src/partials/partials/modules/_mod-filter.scss */
+.filter label {
+  display: inline-block;
+  float: none;
+  text-align: left;
+  width: auto;
+}
+
+/**
+ * @description    styling for the postSomething module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-02 19:05
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        postSomething
+ */
+/**
+ * @description    styling for the edit module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-03 15:28
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        edit
+ */
+/* line 18, ../../css-src/partials/partials/modules/_mod-edit.scss */
+.edit {
+  background-color: black;
+  background-color: black, 0.5;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0;
+  padding: .5em 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/**
+ * @description    styling for the addPhoto module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.3
+ *        @date    2014-03-04 14:31
+ *
+ *
+ *     @example
+ *                 <div class="addPhoto"></div>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        addPhoto
+ */
+/**
+ * @section        pendingPhoto
+ */
+/* line 26, ../../css-src/partials/partials/modules/_mod-add-photo.scss */
+.pendingPhoto {
+  display: inline-block;
+  margin-right: 1em;
+  position: relative;
+}
+/* line 31, ../../css-src/partials/partials/modules/_mod-add-photo.scss */
+.pendingPhoto .delete {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  font-size: 12px;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/**
+ * @description    styling for the people module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-04 21:20
+ *
+ *
+ *     @example
+ *                 <div class="people"></div>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        peopleList
+ */
+/**
+ * @section        person
+ */
+/* line 26, ../../css-src/partials/partials/modules/_mod-people.scss */
+.person {
+  clear: both;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+/**
+ * @section        personAvatar
+ */
+/* line 35, ../../css-src/partials/partials/modules/_mod-people.scss */
+.personAvatar {
+  width: 6.77966%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/**
+ * @section        personDetail
+ */
+/* line 42, ../../css-src/partials/partials/modules/_mod-people.scss */
+.personDetail {
+  width: 74.57627%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/**
+ * @section        personActions
+ */
+/* line 49, ../../css-src/partials/partials/modules/_mod-people.scss */
+.personActions {
+  width: 15.25424%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+
+/**
+ * @description    styling for the timeline module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-05 08:54
+ *
+ *
+ *     @example
+ *                 <div class="timeline"></div>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        timeline
+ */
+/**
+ * @description    styling for the tableDefault class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-05 14:14
+ *
+ *
+ *     @example
+ *                 <table class="tableDefault"></table>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        tableDefault
+ */
+/* line 21, ../../css-src/partials/partials/modules/_mod-table-default.scss */
+.tableDefault thead {
+  border-bottom: 1px solid #d4d4d4;
+}
+/* line 25, ../../css-src/partials/partials/modules/_mod-table-default.scss */
+.tableDefault thead tr:hover {
+  background: transparent;
+}
+/* line 39, ../../css-src/partials/partials/modules/_mod-table-default.scss */
+.tableDefault tr {
+  background: #faf6ec;
+}
+/* line 42, ../../css-src/partials/partials/modules/_mod-table-default.scss */
+.tableDefault tr:nth-child(odd) {
+  background: #fff;
+}
+/* line 46, ../../css-src/partials/partials/modules/_mod-table-default.scss */
+.tableDefault tr:hover {
+  background: #ead9af;
+}
+/* line 51, ../../css-src/partials/partials/modules/_mod-table-default.scss */
+.tableDefault th, .tableDefault td {
+  padding: .5em .6em;
+}
+
+/**
+ * @description    styling for the tableY class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-22 15:20
+ *
+ *
+ *     @example
+ *                 <table class="tableY"></table>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        tableY
+ */
+/* line 21, ../../css-src/partials/partials/modules/_mod-table-y.scss */
+.tableY tr {
+  background: #faf6ec;
+}
+/* line 24, ../../css-src/partials/partials/modules/_mod-table-y.scss */
+.tableY tr:nth-child(odd) {
+  background: #fff;
+}
+/* line 29, ../../css-src/partials/partials/modules/_mod-table-y.scss */
+.tableY th {
+  text-align: left;
+}
+/* line 33, ../../css-src/partials/partials/modules/_mod-table-y.scss */
+.tableY th, .tableY td {
+  padding: .5em .6em;
+}
+
+/**
+ * @description    styling for the media module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-05 19:16
+ *
+ *
+ *     @example
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        media
+ */
+/* line 24, ../../css-src/partials/partials/modules/_mod-media.scss */
+.media {
+  margin: 1em 0;
+}
+
+/**
+ * @section        mediaImg
+ */
+/* line 31, ../../css-src/partials/partials/modules/_mod-media.scss */
+.mediaImg {
+  float: left;
+  margin-right: 1em;
+}
+/* line 35, ../../css-src/partials/partials/modules/_mod-media.scss */
+.mediaImg img {
+  display: block;
+}
+
+/**
+ * @section        mediaBody
+ */
+/* line 43, ../../css-src/partials/partials/modules/_mod-media.scss */
+.mediaBody {
+  display: table-cell;
+}
+
+/**
+ * @section        mediaDate
+ */
+/**
+ * @description    styling for the listResults class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.2
+ *        @date    2014-03-14 15:02
+ *
+ *
+ *     @example
+ *                 <div class="listResults" href="/">AgilityDiary</a>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        listResults
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-list-results.scss */
+.listResults {
+  background: white;
+}
+
+/**
+ * @description    styling for the signedOut module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.2
+ *        @date    2014-02-14 19:31
+ *
+ *
+ *     @example
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        signedOut
+ */
+/**
+ * @description    styling for the cta module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-14 20:07
+ *
+ *
+ *     @example
+  *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        cta
+ */
+/* line 20, ../../css-src/partials/partials/modules/_mod-cta.scss */
+.signedOut .cta {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+/* line 25, ../../css-src/partials/partials/modules/_mod-cta.scss */
+.signedOut .cta:nth-child(3n) {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1em;
+  display: inline;
+}
+/* line 29, ../../css-src/partials/partials/modules/_mod-cta.scss */
+.signedOut .cta h3 {
+  font-size: 28px;
+  font-size: 2.8rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 1px white;
+}
+/* line 35, ../../css-src/partials/partials/modules/_mod-cta.scss */
+.signedOut .cta i {
+  color: #CCC;
+  text-shadow: 1px 1px 1px white;
+}
+
+/**
+ * @description    styling for the social module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-15 12:49
+ *
+ *
+ *     @example
+ *                 <div class="social"></div>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        social
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-social.scss */
+.social {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+/**
+ * @description    styling for the tagline module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-15 12:55
+ *
+ *
+ *     @example
+ *                 <div class="tagline"></div>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        tagline
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-tagline.scss */
+.tagline {
+  font-size: 28px;
+  font-size: 2.8rem;
+  text-shadow: 0px 1px 1px white;
+}
+
+/**
+ * @description    styling for the flash module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-18 20:29
+ *
+ *
+ *     @example
+ *                 <div class="flash"></div>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        flash
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-flash.scss */
+.flash {
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  border: 3px solid #d4d4d4;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+/**
+ * @section        flash
+ */
+/* line 29, ../../css-src/partials/partials/modules/_mod-flash.scss */
+.flash--green {
+  background: #80ff80;
+  border-color: green;
+}
+
+/**
+ * @section        flash
+ */
+/* line 37, ../../css-src/partials/partials/modules/_mod-flash.scss */
+.flash--amber {
+  background: #ffd280;
+  border-color: orange;
+}
+
+/**
+ * @section        flash
+ */
+/* line 45, ../../css-src/partials/partials/modules/_mod-flash.scss */
+.flash--red {
+  background: #ff8080;
+  border-color: red;
+}
+
+/**
+ * @description    styling for the block module
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-03-25 08:44
+ *
+ *
+ *     @example
+ *                 <section class="block"></section>
+ *
+ *        @type    module
+ *       @notes
+ */
+/**
+ * @section        block
+ */
+/* line 19, ../../css-src/partials/partials/modules/_mod-block.scss */
+.block {
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  display: block;
+  padding: 1em;
+}
+/* line 28, ../../css-src/partials/partials/modules/_mod-block.scss */
+.block :first-child {
+  margin-top: 0;
+}
+
+/**
+ * @section        Plugins
+ */
+/**
+ * @section        Helpers
+ */
+/**
+ * @section        Media
+ */
+/**
+ * @section        Development
+ */

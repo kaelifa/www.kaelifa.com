@@ -1,0 +1,50 @@
+/**
+ * @description    styling for the navTabs class
+ *
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.2
+ *        @date    2014-02-12 13:50
+ *
+ *
+ *     @example
+ *                 <nav class="navTabs"></nav>
+ *
+ *        @type    module
+ *       @notes
+ */
+
+/**
+ * @section        navTabs
+ */
+.navTabs {
+    border-bottom: 1px solid $color-border;
+    clear: both;
+    margin: 1em 0;
+    padding: 0 1em;
+
+    a {
+        background: $color-tab;
+        border-bottom: 1px solid $color-tab;
+        color: $color-white;
+        display: inline-block;
+        margin-bottom: -2px;
+        padding: .25em .5em;
+
+        &:hover {
+            background: $color-tab-hover;
+            text-decoration: none;
+        }
+
+        &.active {
+            background: $color-white;
+            border: 1px solid $color-border;
+            border-bottom: none;
+            color: $color-tab;
+        }
+    }
+
+    .count {
+        @include font-size(1.2);
+    }
+
+}

@@ -1,0 +1,71 @@
+/**
+ * @description    Susy Settings - Set up your default grid values: total columns, column width, and gutter width.
+ *
+ *      @author    http://susy.oddbird.net/
+ *     @version    0.1
+ *        @date    2014-04-02 15:48
+ *
+ *     @example
+ *
+ *        @type    settings
+ *       @notes    The breakpoint variables use colour coding. The .globalHeader class has debgging which
+ *                 can be enabled to view the matching colours in the background of the .globalHeader in
+ *                 the front end.
+ *      @ignore
+ *
+ */
+
+/**
+ * @section        settings
+ *   @notes        default size 0px - 576px
+ */
+$total-cols       : 7;
+$col-width        : 4em; // 4 * 16px = 64px
+$gutter-width     : 1em; // 1 x 16px = 16px
+$side-gutter-width: 0; //
+$grid-padding     : $gutter-width;
+$container-width  : 71em;
+
+// Defining the breakpoints
+// 576px; 7 columns
+// 736px; 9 columns
+// 752px;
+// 816px; 10 columns
+// 976px; 12 columns
+// 1056px; 13 columns
+
+/**
+ * @section        736 - PURPLE
+ *   @notes        (min-width: 321px) and (max-width: 480px)
+ */
+$view_purple: 480px 9 575px;
+
+/**
+ * @section        736 - RED
+ *   @notes        (min-width: 576px) and (max-width: 736px)
+ */
+$view_red: 576px 9 736px;
+
+/**
+ * @section        736 - PINK
+ *   @notes        (min-width: 576px)
+ */
+$view_pink: 576px 12;
+
+/**
+ * @section        816 - BLUE
+ *   @notes        (min-width: 736px) and (max-width: 816px)
+ */
+$view_blue: 736px 10 816px;
+
+/**
+ * @section        816 - YELLOW
+ *   @notes        (max-width: 816px)
+ */
+$view_yellow: 0 12 816px;
+
+/**
+ * @section        976 - GREEN
+ *   @notes        (min-width: 816px)
+ */
+$view_green: 816px 12;

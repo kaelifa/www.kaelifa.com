@@ -1,0 +1,29 @@
+/**
+    @description    styling for the media module
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-03 15:55
+           @type    module
+          @notes
+ */
+
+/**
+  @section        media
+ */
+ .media {
+     overflow: hidden;
+ }
+
+.media__image {
+   float: left;
+   margin-right: 1em;
+}
+
+.media__body {
+   overflow: hidden;
+
+   :first-child {
+    margin-top: 0;
+   }
+}
+

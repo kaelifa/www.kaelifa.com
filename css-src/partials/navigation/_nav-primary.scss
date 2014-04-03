@@ -1,0 +1,39 @@
+/**
+    @description    Styling for the primary navigation
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-02-10 10:58
+        @example
+                    <nav class="navPrimary">
+                    </nav>
+           @type    navigation
+          @notes
+ */
+
+/**
+    @section        navPrimary
+ */
+.navPrimary {
+
+    a {
+      @include font-size(2.7);
+      @include nav-font-stack;
+      font-weight: bold;
+      padding: 0 1em;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        &.active,
+        &:hover {
+
+        }
+
+    }
+
+    .active {
+
+    }
+
+}

@@ -1,0 +1,21 @@
+/**
+    @description    styling for the brandLogo class
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-02 16:29
+        @example    <a class="brandLogo" href="/">Company Name</a>
+           @type    module
+          @notes
+ */
+
+/**
+    @section        brandLogo
+ */
+.brandLogo {
+    color: $color-brand;
+    display: block;
+    @include font-size(4.5);
+    font-weight: bold;
+    @include headline-font-stack;
+    margin: 1em 0;
+}

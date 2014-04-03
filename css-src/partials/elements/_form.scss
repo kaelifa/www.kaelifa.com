@@ -1,0 +1,116 @@
+/**
+    @description    Form styles
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-03 12:40
+           @type    element
+          @notes
+ */
+
+/**
+  @section        form
+ */
+form {
+    margin-bottom: 1em;
+    padding: 1em;
+
+    > :first-child {
+        margin-top: 0;
+    }
+
+}
+
+/**
+  @section        label
+ */
+label {
+    @include span-columns(3,12);
+
+    cursor: pointer;
+    margin: .5em 0;
+    padding: .5em;
+    text-align: right;
+}
+
+/**
+  @section        input
+ */
+input {
+    background: lighten($color-border, 15%);
+    border: .25em solid $color-border;
+    @include border-radius(.5em);
+    @include default-font-stack;
+    margin: .5em .6em;
+    outline: none;
+    padding: .5em .6em;
+
+    &[type="email"],
+    &[type="password"],
+    &[type="text"],
+    &[type="url"] {
+        @include span-columns(6,12);
+    }
+
+    &[type="radio"],
+    &[type="checkbox"] {
+        margin: 1em 0;
+    }
+
+    &[type="submit"] {
+
+    }
+}
+
+
+/**
+  @section        textarea
+ */
+textarea {
+    @include span-columns(6,12);
+
+    background: lighten($color-border, 15%);
+    @include border-radius(.5em);
+    border: .25em solid $color-border;
+    @include default-font-stack;
+    height: 10em;
+    margin: .5em .6em;
+    outline: none;
+    padding: .5em .6em;
+}
+
+/**
+    @section        button
+ */
+button {
+    background: $color-button;
+    border: none;
+    @include border-radius(.5em);
+    color: $color-white;
+    @include default-font-stack;
+    margin: .5em .6em;
+    padding: .75em 1em;
+}
+
+/**
+ * @section        select
+ */
+select {
+    @include border-radius(.25em);
+    @include default-font-stack;
+    border-color: $color-border;
+    margin: 1em .6em;
+    outline: none;
+    padding: .5em .6em;
+}
+
+/**
+ * @section        option
+ */
+option {
+    @include border-radius(.25em);
+    @include default-font-stack;
+    border-color: $color-border;
+    margin: 1em .6em;
+    outline: none;
+    padding: .5em .6em;
+}

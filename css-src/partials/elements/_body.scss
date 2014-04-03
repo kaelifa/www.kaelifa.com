@@ -1,0 +1,21 @@
+/**
+    @description    Creates the default styling for the body element
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-02-08 18:58
+           @type    element
+          @notes
+ */
+
+
+/**
+    @section        body
+ */
+body {
+    background: $color-body-bg url("/template-assets/images/background/jigsaw.png") repeat 0% 0%;
+    color: $color-copy;
+    @include default-font-stack;
+    @include font-size(1.8);
+    line-height: 1.5;
+    margin: 0;
+}

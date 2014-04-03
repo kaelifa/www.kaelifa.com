@@ -1,0 +1,1207 @@
+/**
+    @project     kaelifa.com
+       @file     styles.css
+     @author     Kristina Auckland <Kristina.Auckland@gmail.com>
+    @version     0.1
+       @date     2014-04-02 15:47
+      @notes     NB. This is the master Sass file which imports all the partials.
+                No CSS should be written in this file.
+ */
+/*! Please be aware that styles.css is a generated file and has been built using SCSS */
+/**
+ * @section        Compass
+ *   @notes        http://compass-style.org/install/
+ *                 $ gem update --system
+ *                 $ gem install compass
+ */
+/**
+    @section        Susy Grid
+      @notes        http://susy.oddbird.net/guides/
+                    $ gem install susy
+ */
+/**
+    @section        Settings
+ */
+/**
+ * @description    Susy Settings - Set up your default grid values: total columns, column width, and gutter width.
+ *
+ *      @author    http://susy.oddbird.net/
+ *     @version    0.1
+ *        @date    2014-04-02 15:48
+ *
+ *     @example
+ *
+ *        @type    settings
+ *       @notes    The breakpoint variables use colour coding. The .globalHeader class has debgging which
+ *                 can be enabled to view the matching colours in the background of the .globalHeader in
+ *                 the front end.
+ *      @ignore
+ *
+ */
+/**
+ * @section        settings
+ *   @notes        default size 0px - 576px
+ */
+/**
+ * @section        736 - PURPLE
+ *   @notes        (min-width: 321px) and (max-width: 480px)
+ */
+/**
+ * @section        736 - RED
+ *   @notes        (min-width: 576px) and (max-width: 736px)
+ */
+/**
+ * @section        736 - PINK
+ *   @notes        (min-width: 576px)
+ */
+/**
+ * @section        816 - BLUE
+ *   @notes        (min-width: 736px) and (max-width: 816px)
+ */
+/**
+ * @section        816 - YELLOW
+ *   @notes        (max-width: 816px)
+ */
+/**
+ * @section        976 - GREEN
+ *   @notes        (min-width: 816px)
+ */
+/**
+    @section        Variables
+ */
+/**
+    @description    Colour palette
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-02 15:48
+        @example
+           @type    variables
+          @notes
+         @ignore
+ */
+/**
+    @section        Base colours
+*/
+/**
+    @section        Set Brand Colours
+*/
+/**
+    @section        Social icon colours
+*/
+/**
+    @section        Colour
+*/
+/**
+    @section        Mixins
+ */
+/**
+    @description    font-sizing mixin
+         @author    http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+        @version    0.1
+           @date    2014-04-02 09:57
+        @example    @include font-size(1.6);
+           @type    mixin
+          @notes    returns rem and fall-back px values
+         @ignore
+ */
+/**
+    @section        font-size
+ */
+/**
+    @description    font stack mixins
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-02-08 18:57
+        @example    @include default-font-stack;
+           @type    mixin
+          @notes
+         @ignore
+ */
+/**
+       @section   import fonts
+ */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,500);
+/**
+        @section   default-font-stack
+ */
+/**
+        @section   headline-font-stack
+ */
+/**
+        @section   logo-font-stack
+ */
+/**
+        @section   contrast-font-stack
+ */
+/**
+        @section   nav-font-stack
+ */
+/**
+    @description    rgba-bg mixin
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2013-05-14 09:57
+        @example
+           @type    mixin
+          @notes    converts hex value to rgb along with alpha
+         @ignore
+ */
+/**
+    @section        rgba-bg
+ */
+/**
+    @section        Placeholders
+ */
+/**
+    @description    visuallyhidden placeholder
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-02-10 10:49
+        @example
+                    .element p {
+                         @extend %visuallyhidden;
+                     }
+           @type    mixin
+          @notes    Hide only visually, but have it available for screenreaders: h5bp.com/v
+         @ignore
+ */
+/**
+    @section        visuallyhidden
+ */
+/**
+          @notes    Extends the .visuallyhidden class to allow the element to be focusable
+                    when navigated to via the keyboard: h5bp.com/p
+                    <div class="visuallyhidden focusable"></div>
+ */
+/**
+    @section        Global
+ */
+/* line 14, ../../../../../../../Applications/Mixture.app/Contents/Resources/gems/susy-1.0.9/sass/susy/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/**
+    @description    font stack mixins
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-02 16:17
+        @example
+           @type    mixin
+          @notes    Remove text-shadow in selection highlight: h5bp.com/i
+                    These selection declarations have to be separate.
+                    Customize the background color to match your design.
+         @ignore
+ */
+/**
+        @section   moz-selection
+ */
+/* line 18, ../css-src/partials/global/_selection.scss */
+::-moz-selection {
+  background: orange;
+  text-shadow: none;
+}
+
+/**
+        @section   selection
+ */
+/* line 26, ../css-src/partials/global/_selection.scss */
+::selection {
+  background: orange;
+  text-shadow: none;
+}
+
+/**
+    @description    normalize reset stylesheet
+         @author    normalize.css v3.0.1 | MIT License | git.io/normalize
+        @version    3.0.1
+           @date    2014-04-02 16:16
+           @type    global reset
+          @notes
+         @ignore
+ */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+    1. Set default font family to sans-serif.
+    2. Prevent iOS text size adjust after orientation change, without disabling
+       user zoom.
+ */
+/* line 20, ../css-src/partials/vendor/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+    Remove default margin.
+ */
+/* line 30, ../css-src/partials/vendor/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+    Correct `block` display not defined for any HTML5 element in IE 8/9.
+    Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+    Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 54, ../css-src/partials/vendor/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+    1. Correct `inline-block` display not defined in IE 8/9.
+    2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 66, ../css-src/partials/vendor/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+    Prevent modern browsers from displaying `audio` without controls.
+    Remove excess height in iOS 5 devices.
+ */
+/* line 76, ../css-src/partials/vendor/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+    Address `[hidden]` styling not present in IE 8/9/10.
+    Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 87, ../css-src/partials/vendor/_normalize.scss */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+/**
+    Remove the gray background color from active links in IE 10.
+ */
+/* line 98, ../css-src/partials/vendor/_normalize.scss */
+a {
+  background: transparent;
+}
+
+/**
+    Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 107, ../css-src/partials/vendor/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+    Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 118, ../css-src/partials/vendor/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+    Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 127, ../css-src/partials/vendor/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+    Address styling not present in Safari and Chrome.
+ */
+/* line 135, ../css-src/partials/vendor/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+    Address variable `h1` font-size and margin within `section` and `article`
+    contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 144, ../css-src/partials/vendor/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+    Address styling not present in IE 8/9.
+ */
+/* line 153, ../css-src/partials/vendor/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+    Address inconsistent and variable font size in all browsers.
+ */
+/* line 162, ../css-src/partials/vendor/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+    Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 171, ../css-src/partials/vendor/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 178, ../css-src/partials/vendor/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 182, ../css-src/partials/vendor/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+    Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 193, ../css-src/partials/vendor/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+    Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 201, ../css-src/partials/vendor/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+    Address margin not present in IE 8/9 and Safari.
+ */
+/* line 212, ../css-src/partials/vendor/_normalize.scss */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+    Address differences between Firefox and other browsers.
+ */
+/* line 220, ../css-src/partials/vendor/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+    Contain overflow in all browsers.
+ */
+/* line 230, ../css-src/partials/vendor/_normalize.scss */
+pre {
+  overflow: auto;
+}
+
+/**
+    Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 241, ../css-src/partials/vendor/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+    Known limitation: by default, Chrome and Safari on OS X allow very limited
+    styling of `select`, unless a `border` property is set.
+ */
+/**
+    1. Correct color not being inherited.
+       Known issue: affects color of disabled elements.
+    2. Correct font properties not being inherited.
+    3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 265, ../css-src/partials/vendor/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+    Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 275, ../css-src/partials/vendor/_normalize.scss */
+button {
+  overflow: visible;
+}
+
+/**
+    Address inconsistent `text-transform` inheritance for `button` and `select`.
+    All other form control elements do not inherit `text-transform` values.
+    Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+    Correct `select` style inheritance in Firefox.
+ */
+/* line 287, ../css-src/partials/vendor/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+    1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+       and `video` controls.
+    2. Correct inability to style clickable `input` types in iOS.
+    3. Improve usability and consistency of cursor style between image-type
+       `input` and others.
+ */
+/* line 302, ../css-src/partials/vendor/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+    Re-set default cursor for disabled elements.
+ */
+/* line 312, ../css-src/partials/vendor/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+    Remove inner padding and border in Firefox 4+.
+ */
+/* line 321, ../css-src/partials/vendor/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+    Address Firefox 4+ setting `line-height` on `input` using `!important` in
+    the UA stylesheet.
+ */
+/* line 331, ../css-src/partials/vendor/_normalize.scss */
+input {
+  line-height: normal;
+}
+
+/**
+    It's recommended that you don't attempt to style these elements.
+    Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+    1. Address box sizing set to `content-box` in IE 8/9/10.
+    2. Remove excess padding in IE 8/9/10.
+ */
+/* line 344, ../css-src/partials/vendor/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+    Fix the cursor style for Chrome's increment/decrement buttons. For certain
+    `font-size` values of the `input`, it causes the cursor style of the
+    decrement button to change from `default` to `text`.
+ */
+/* line 356, ../css-src/partials/vendor/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+    1. Address `appearance` set to `searchfield` in Safari and Chrome.
+    2. Address `box-sizing` set to `border-box` in Safari and Chrome
+       (include `-moz` to future-proof).
+ */
+/* line 366, ../css-src/partials/vendor/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+    Remove inner padding and search cancel button in Safari and Chrome on OS X.
+    Safari (but not Chrome) clips the cancel button when the search input has
+    padding (and `textfield` appearance).
+ */
+/* line 380, ../css-src/partials/vendor/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+    Define consistent border, margin, and padding.
+ */
+/* line 388, ../css-src/partials/vendor/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+    1. Correct `color` not being inherited in IE 8/9/10/11.
+    2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 399, ../css-src/partials/vendor/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+    Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 408, ../css-src/partials/vendor/_normalize.scss */
+textarea {
+  overflow: auto;
+}
+
+/**
+    Don't inherit the `font-weight` (applied by a rule above).
+    NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 417, ../css-src/partials/vendor/_normalize.scss */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+    Remove most spacing between table cells.
+ */
+/* line 428, ../css-src/partials/vendor/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 434, ../css-src/partials/vendor/_normalize.scss */
+td,
+th {
+  padding: 0;
+}
+
+/**
+    @section        Elements
+ */
+/**
+    @description    Styling for the html element
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-02 16:19
+           @type    element
+          @notes
+ */
+/**
+    @section        html
+ */
+/* line 14, ../css-src/partials/elements/_html.scss */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: sans-serif;
+  font-size: 62.5%;
+  overflow-y: scroll;
+}
+
+/**
+    @description    Creates the default styling for the body element
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-02-08 18:58
+           @type    element
+          @notes
+ */
+/**
+    @section        body
+ */
+/* line 14, ../css-src/partials/elements/_body.scss */
+body {
+  background: #eeeeee url("/template-assets/images/background/jigsaw.png") repeat 0% 0%;
+  color: black;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.8 10px;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/**
+    @description    Creates the default styling for links
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-02 16:21
+           @type    element
+          @notes    ensure pseudo classes are ordered:
+                     :link
+                     :visited
+                     :hover
+                     :focus
+                     :active
+ */
+/**
+    @section        a
+ */
+/* line 19, ../css-src/partials/elements/_a.scss */
+a {
+  color: #00a8b5;
+  text-decoration: none;
+}
+/* line 23, ../css-src/partials/elements/_a.scss */
+a:focus {
+  outline: thin dotted;
+}
+/* line 28, ../css-src/partials/elements/_a.scss */
+a:active, a:hover {
+  color: #bd007f;
+  outline: 0;
+}
+/* line 33, ../css-src/partials/elements/_a.scss */
+a[href^="tel:"] {
+  color: black;
+  cursor: default;
+  text-decoration: none;
+}
+/* line 39, ../css-src/partials/elements/_a.scss */
+a[href^="tel:"]:before {
+  content: "\260E";
+  display: inline-block;
+  margin-right: 0.5em;
+}
+/* line 45, ../css-src/partials/elements/_a.scss */
+a img {
+  border: none;
+}
+
+/**
+    @description    Heading styles
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-02 16:22
+           @type    element
+          @notes
+ */
+/**
+    @section        h1
+ */
+/**
+    @section        h1,h2,h3,h4,h5,h6
+ */
+/* line 26, ../css-src/partials/elements/_hx.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: -0.05em;
+  font-weight: bold;
+}
+
+/**
+    @section        h2
+ */
+/* line 34, ../css-src/partials/elements/_hx.scss */
+h2 {
+  font-size: 3.6 10px;
+  font-size: 3.6rem;
+  margin: 1em 0;
+}
+
+/**
+    @section        h3
+ */
+/* line 42, ../css-src/partials/elements/_hx.scss */
+h3 {
+  font-size: 2.7 10px;
+  font-size: 2.7rem;
+}
+
+/**
+    @section        h4
+ */
+/**
+    @section        h5
+ */
+/**
+    @section        h6
+ */
+/**
+    @description    Styling for the nav element
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-02 16:23
+           @type    element
+          @notes
+ */
+/**
+    @section        nav
+ */
+/**
+    @description    Styling for the strong element
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-02 16:24
+           @type    element
+          @notes    Also covers styling for <b>
+ */
+/**
+    @section        strong
+ */
+/* line 15, ../css-src/partials/elements/_strong.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+    @description    Creates the default styling for images
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2013-05-14 09:57
+           @type    element
+          @notes
+ */
+/**
+    @section        img
+ */
+/**
+    @description    Form styles
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-03 12:40
+           @type    element
+          @notes
+ */
+/**
+  @section        form
+ */
+/* line 13, ../css-src/partials/elements/_form.scss */
+form {
+  margin-bottom: 1em;
+  padding: 1em;
+}
+/* line 17, ../css-src/partials/elements/_form.scss */
+form > :first-child {
+  margin-top: 0;
+}
+
+/**
+  @section        label
+ */
+/* line 26, ../css-src/partials/elements/_form.scss */
+label {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  cursor: pointer;
+  margin: .5em 0;
+  padding: .5em;
+  text-align: right;
+}
+
+/**
+  @section        input
+ */
+/* line 38, ../css-src/partials/elements/_form.scss */
+input {
+  background: #d7eff0;
+  border: 0.25em solid #a0d9db;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  font-family: 'Noto Sans', sans-serif;
+  margin: .5em .6em;
+  outline: none;
+  padding: .5em .6em;
+}
+/* line 50, ../css-src/partials/elements/_form.scss */
+input[type="email"], input[type="password"], input[type="text"], input[type="url"] {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+/* line 55, ../css-src/partials/elements/_form.scss */
+input[type="radio"], input[type="checkbox"] {
+  margin: 1em 0;
+}
+
+/**
+  @section        textarea
+ */
+/* line 68, ../css-src/partials/elements/_form.scss */
+textarea {
+  width: 49.15254%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+  background: #d7eff0;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  border: 0.25em solid #a0d9db;
+  font-family: 'Noto Sans', sans-serif;
+  height: 10em;
+  margin: .5em .6em;
+  outline: none;
+  padding: .5em .6em;
+}
+
+/**
+    @section        button
+ */
+/* line 84, ../css-src/partials/elements/_form.scss */
+button {
+  background: #bd007f;
+  border: none;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+  margin: .5em .6em;
+  padding: .75em 1em;
+}
+
+/**
+ * @section        select
+ */
+/* line 97, ../css-src/partials/elements/_form.scss */
+select {
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  font-family: 'Noto Sans', sans-serif;
+  border-color: #a0d9db;
+  margin: 1em .6em;
+  outline: none;
+  padding: .5em .6em;
+}
+
+/**
+ * @section        option
+ */
+/* line 109, ../css-src/partials/elements/_form.scss */
+option {
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border-radius: 0.25em;
+  font-family: 'Noto Sans', sans-serif;
+  border-color: #a0d9db;
+  margin: 1em .6em;
+  outline: none;
+  padding: .5em .6em;
+}
+
+/**
+    @section        Layout
+ */
+/**
+ * @description    Styling for the container class
+ *      @author    Kristina Auckland <kristina.auckland@gmail.com>
+ *     @version    0.1
+ *        @date    2014-04-02 17:59
+ *     @example    <div class="container"></div>
+ *        @type    layout
+ *       @notes
+ */
+/**
+ * @section        container
+ */
+/* line 15, ../css-src/partials/default-layout/_container.scss */
+.container {
+  *zoom: 1;
+  max-width: 71em;
+  _width: 71em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+}
+/* line 38, ../../../../../../../Applications/Mixture.app/Contents/Resources/gems/compass-0.12.4/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/**
+    @description    Stying for the main layout footer
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-03 16:06
+        @example    <footer class="layoutFooter" role="contentinfo"></footer>
+           @type    layout
+          @notes
+ */
+/**
+    @section        layoutFooter
+ */
+/* line 15, ../css-src/partials/default-layout/_layout-footer.scss */
+.layoutFooter {
+  clear: both;
+}
+
+/**
+    @section        Navigation
+ */
+/**
+    @description    Styling for the primary navigation
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-02-10 10:58
+        @example
+                    <nav class="navPrimary">
+                    </nav>
+           @type    navigation
+          @notes
+ */
+/**
+    @section        navPrimary
+ */
+/* line 18, ../css-src/partials/navigation/_nav-primary.scss */
+.navPrimary a {
+  font-size: 2.7 10px;
+  font-size: 2.7rem;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: -0.05em;
+  font-weight: bold;
+  padding: 0 1em;
+}
+/* line 24, ../css-src/partials/navigation/_nav-primary.scss */
+.navPrimary a:first-child {
+  padding-left: 0;
+}
+
+/**
+    @description    Styling for the social navigation
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-03 16:08
+        @example    <nav class="navSocial"></nav>
+           @type    navigation
+          @notes
+ */
+/**
+    @section        navSocial
+ */
+/* line 14, ../css-src/partials/navigation/_nav-social.scss */
+.navSocial {
+  padding: 1em 0;
+}
+
+/**
+    @section        Modules
+ */
+/**
+    @description    styling for the brandLogo class
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-02 16:29
+        @example    <a class="brandLogo" href="/">Company Name</a>
+           @type    module
+          @notes
+ */
+/**
+    @section        brandLogo
+ */
+/* line 14, ../css-src/partials/modules/_mod-brand-logo.scss */
+.brandLogo {
+  color: #bd007f;
+  display: block;
+  font-size: 4.5 10px;
+  font-size: 4.5rem;
+  font-weight: bold;
+  font-family: 'Ubuntu', sans-serif;
+  letter-spacing: -0.05em;
+  margin: 1em 0;
+}
+
+/**
+    @description    styling for the form module
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-03 12:31
+           @type    module
+          @notes
+ */
+/**
+  @section        formActions
+ */
+/* line 13, ../css-src/partials/modules/_mod-form.scss */
+.formActions {
+  clear: both;
+  padding: 3em 0 2em 0;
+  text-align: center;
+}
+
+/**
+  @section        formField
+ */
+/* line 22, ../css-src/partials/modules/_mod-form.scss */
+.formField {
+  width: 100%;
+  float: left;
+  margin-right: 1.69492%;
+  display: inline;
+}
+
+/**
+  @section        formContent
+ */
+/* line 29, ../css-src/partials/modules/_mod-form.scss */
+.formContent {
+  padding-left: 25.42373%;
+}
+/* line 32, ../css-src/partials/modules/_mod-form.scss */
+.formContent :first-child {
+  margin-top: 0;
+}
+
+/**
+  @section        formCheckbox
+ */
+/* line 40, ../css-src/partials/modules/_mod-form.scss */
+.formCheckbox {
+  padding-left: 25.42373%;
+}
+/* line 43, ../css-src/partials/modules/_mod-form.scss */
+.formCheckbox label {
+  float: none;
+  text-align: left;
+  width: auto;
+}
+
+/**
+    @description    styling for the media module
+         @author    Kristina Auckland <kristina.auckland@gmail.com>
+        @version    0.1
+           @date    2014-04-03 15:55
+           @type    module
+          @notes
+ */
+/**
+  @section        media
+ */
+/* line 13, ../css-src/partials/modules/_mod-media.scss */
+.media {
+  overflow: hidden;
+}
+
+/* line 17, ../css-src/partials/modules/_mod-media.scss */
+.media__image {
+  float: left;
+  margin-right: 1em;
+}
+
+/* line 22, ../css-src/partials/modules/_mod-media.scss */
+.media__body {
+  overflow: hidden;
+}
+/* line 25, ../css-src/partials/modules/_mod-media.scss */
+.media__body :first-child {
+  margin-top: 0;
+}
+
+/**
+    @section        Plugins
+ */
+/**
+    @section        Media
+ */
+/**
+    @section        Development
+ */
